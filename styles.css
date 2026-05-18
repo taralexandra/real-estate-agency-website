@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --soft-green: #C1ECAC ;
+    --soft-green-1: #D0F0C0;
+    --off-white: #FFFAFA;
+    --coral-vivid:#FF6347;
+    --coral-light:#FF715B;
+    --mahogany-black: #330F0A;
+}
+
+
+h1, h2, h3, h4 {
+    font-family: "Bree Serif", serif;
+}
+
+p {
+    font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+}
