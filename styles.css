@@ -152,8 +152,8 @@ nav img {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 40px; /* Espace entre le groupe Ville et le groupe Type */
-    flex-wrap: wrap; /* Pour que ça s'empile joliment sur petit écran */
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .filter-group span {
@@ -172,10 +172,8 @@ nav img {
     padding: 10px 18px;
     border-radius: 24px;
     font-family: "Lato", sans-serif;
-    /* color: var(--off-white); */
     color: var(--mahogany-black);
     background-color: var(--off-white);
-    /* background-color: var(--coral-vivid); */
     font-weight: 700;
     font-size: 1.1rem;
     border: 3px solid var(--off-white);
@@ -186,6 +184,36 @@ nav img {
     background-color: var(--coral-vivid);
     color: var(--off-white);
 }
+
+.btn-filter.active {
+    background-color: var(--soft-green);
+    border-color: var(--soft-green);
+    color: var(--mahogany-black);
+    font-weight: 700;
+}
+
+/* Properties cards */
+.property-card {
+    max-width: 350px;
+    min-height: 380px;
+    background-color: var(--off-white);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-price {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 18px;
+    background-color: var(--coral-vivid);
+    margin-top: auto;
+    width: 130px;
+    margin-left: auto;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
 /* Testimonials */
 .testimonials {
     min-height: 50vh;
