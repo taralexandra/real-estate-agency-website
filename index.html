@@ -40,21 +40,65 @@
       </section>
       <section class="filter-section">
         <h2>Available properties</h2>
+
         <div class="filter-container">
-          <div class="filter-group">
-            <span>Location :</span>
-            <button class="btn-filter active">Peu importe</button>
-            <button class="btn-filter">Fréjus</button>
-            <button class="btn-filter">Saint-Raphaël</button>
-            <button class="btn-filter">Roquebrune</button>
+          <div class="city-container">
+            <label for="city">Choose a city:</label>
+
+            <select name="city" id="city">
+              <option value="frejus">Fréjus</option>
+              <option value="saint-raphael">Saint-Raphaël</option>
+              <option value="roquebrune">Roquebrune-sur-Argens</option>
+              <option value="all">All</option>
+            </select>
           </div>
-          <div class="filter-group">
-            <span>Type de bien :</span>
-            <button class="btn-filter active">Tous</button>
-            <button class="btn-filter">Appartement</button>
-            <button class="btn-filter">Villa</button>
+          <div class="type-container">
+            <label for="type">Type of property:</label>
+            <select name="type" id="type">
+              <option value="house">House</option>
+              <option value="flat">Flat</option>
+              <option value="all">All</option>
+            </select>
+          </div>
+          <div class="highlights-container">
+            <div class="highlight-option">
+              <input type="checkbox" id="pool" name="highlights" value="pool" />
+              <label for="pool">Swimming pool</label>
+            </div>
+            <div class="highlight-option">
+              <input type="checkbox" id="ac" name="highlights" value="ac" />
+              <label for="ac">Air Conditioning</label>
+            </div>
+            <div class="highlight-option">
+              <input
+                type="checkbox"
+                id="garden"
+                name="highlights"
+                value="garden"
+              />
+              <label for="garden">Garden</label>
+            </div>
+            <div class="highlight-option">
+              <input
+                type="checkbox"
+                id="terrace"
+                name="highlights"
+                value="terrace"
+              />
+              <label for="terrace">Terrace</label>
+            </div>
+            <div class="highlight-option">
+              <input
+                type="checkbox"
+                id="fitness"
+                name="highlights"
+                value="fitness"
+              />
+              <label for="fitness">Fitness room</label>
+            </div>
           </div>
         </div>
+
         <div class="property-container">
           <div class="property-card">
             <div class="card-image">
@@ -132,8 +176,48 @@
         </div>
       </section>
 
-      <section class="properties-grid"></section>
-      <section class="testimonials"></section>
+      <section class="testimonials-section">
+        <h2>What our customers says</h2>
+        <div class="bento-grid">
+          <!-- First review -->
+          <div class="bento-card buyer-card">
+            <div class="quote-icon">“</div>
+            <p class="testimonial-text">
+              "Après des mois de recherche, j'ai enfin trouvé la perle rare à
+              Saint-Raphaël. L'accompagnement a été parfait du début à la fin !"
+            </p>
+            <div class="client-info">
+              <strong>Alexandre K.</strong>
+              <span>- Nouveau propriétaire</span>
+            </div>
+          </div>
+          <!-- Second review -->
+          <div class="bento-card seller-card">
+            <div class="quote-icon">“</div>
+            <p class="testimonial-text">
+              "Bien vendu en moins de trois semaines au prix de l'estimation.
+              Une efficacité redoutable et beaucoup de sérénité."
+            </p>
+            <div class="client-info">
+              <strong>Clara & Wendy L</strong>
+              <span>- Prêtes pour un nouveau chapitre</span>
+            </div>
+          </div>
+
+          <!-- Third review -->
+          <div class="bento-card human-card">
+            <div class="quote-icon">“</div>
+            <p class="testimonial-text">
+              "Une disponibilité rare et une écoute humaine qui font toute la
+              différence dans ce genre de projet. Merci pour tout.
+            </p>
+            <div class="client-info">
+              <strong>Laurent A</strong>
+              <span>- A trouvé l'appartement idéal</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer></footer>
