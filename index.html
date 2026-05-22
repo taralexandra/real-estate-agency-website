@@ -4,25 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Real Estate Agency</title>
   </head>
   <body>
-    <header>
+    <header id="home">
       <!--Logo principal puis liens et bouton contact-->
+      
       <nav>
         <img src="./images/logo-agency-v2.png" alt="logo-agency" />
+        <h1>Riviera Keys</h1>
         <div class="nav-links" id="mobile-menu">
-          <a href="#">Our agency</a>
-          <a href="#">Our properties</a>
-          <a href="#">Testimonials</a>
-          <a href="#" class="btn-contact">Contact</a>
+          <a href="#about-us">Our agency</a>
+          <a href="#catalog">Our properties</a>
+          <a href="#testimonials-section">Testimonials</a>
+          <a href="#contact" class="btn-contact">Contact</a>
         </div>
       </nav>
       <!-- <h1>Welcome Home!</h1> -->
     </header>
     <main>
-      <section class="hero-section"></section>
-      <section class="about-us">
+ 
+      <section class="about-us" id="about-us">
         <div class="about-container">
           <div class="about-text">
             <h2>Our Agency</h2>
@@ -38,7 +41,7 @@
           <div class="image-illustration-buildings"></div>
         </div>
       </section>
-      <section class="filter-section">
+      <section class="filter-section" id="catalog">
         <h2>Available properties</h2>
 
         <div class="filter-container">
@@ -176,8 +179,8 @@
         </div>
       </section>
 
-      <section class="testimonials-section">
-        <h2>What our customers says</h2>
+      <section class="testimonials-section" id="testimonials-section">
+        <h2>What our customers say</h2>
         <div class="bento-grid">
           <!-- First review -->
           <div class="bento-card buyer-card">
@@ -220,6 +223,26 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer class="main-footer" id="contact">
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p><i class="fa-solid fa-location-dot"></i>117 Rue des Nouveaux Départs </br> 83 700 Saint-Raphaël</p>
+        <p><i class="fa-solid fa-phone"></i>07 77 00 08 88</p>
+      </div>
+      <div class="footer-logo">
+        <img src="./images/logo-agency-v2.png" alt="logo-agency-footer" />
+        <p>Riviera Keys<p>
+      </div>
+      <div class="footer-links">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#catalog">Our Properties</a></li>
+          <li><a href="#testimonials-section">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

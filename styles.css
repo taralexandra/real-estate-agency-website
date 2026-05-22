@@ -7,6 +7,10 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --white: #ffffff;
     --black: #000000;
@@ -33,7 +37,7 @@ p {
 
 header {
     min-height: 100vh;
-    background-image: linear-gradient(rgba(193, 236, 172, 0.1), rgba(193, 236, 172, 0.6)), url(./images/img-hero-remise-clés.png);  
+    background-image: linear-gradient(rgba(44, 44, 44, 0.084), rgba(32, 32, 32, 0.27)), url(./images/img-hero-remise-clés.png);  
     /* background-image: linear-gradient(rgba(255, 99, 71, 0.1), rgba(255, 99, 71, 0.6)), url(./images/img-hero-remise-clés.png);   */
     background-size: cover;
     background-position: center;
@@ -375,8 +379,59 @@ overflow: hidden;
 }
 
 /* Footer */
-
-footer {
-    height: 300px;
+.main-footer {
     background-color: var(--coral-light);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 60px 40px;
+    align-items: start;
+    justify-items: center;
+}
+
+.footer-contact {
+    text-align: left;
+    /* justify-self: start; */
+}
+
+.footer-contact p {
+    margin-top: 12px;
+}
+
+.footer-contact i { 
+    color: var(--mahogany-black); 
+    margin-right: 8px; 
+}
+
+.footer-logo {
+    text-align: center;
+    justify-self: center;
+}
+
+.footer-links {
+    text-align: left;
+    /* justify-self: end; */
+}
+.footer-logo img {
+    height: 75px;
+}
+
+.footer-logo p {
+    font-size: 2rem;
+    font-family: "Bree Serif", serif;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: inherit;
+    font-family: "Lato", sans-serif;
 }
