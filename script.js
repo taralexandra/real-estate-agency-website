@@ -9,7 +9,7 @@ const properties = [
         cityTag: "saint-raphael",
         type: "house",
         price: "345 000 €",
-        tags: ["garden ", "terrace ", "AC "]
+        tags: ["garden", "terrace", "ac"]
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const properties = [
         cityTag: "saint-raphael",
         type: "house",
         price: "1 280 000 €",
-        tags: ["terrace ", "swimming pool ", "fitness ", "garden ", "AC "]
+        tags: ["terrace", "pool", "fitness", "garden", "ac"]
     },
     {
         id: 3,
@@ -31,19 +31,21 @@ const properties = [
         cityTag: "frejus",
         type: "apartment",
         price: "297 000 €",
-        tags: ["AC ", "terrace "]
+        tags: ["ac", "terrace"]
     }
 ];
 
 const propertyContainer = document.querySelector(".property-container");
-
-// console.log("Le script est branché ! Voici nos biens :", properties);
-// console.log("Mon conteneur HTML ciblé :", propertyContainer);
+const citySelect = document.getElementById("city");
+const typeSelect = document.getElementById("type");
+const checkboxesTags = document.querySelectorAll("input[name='highlights']");
+// console.log("Mon conteneur HTML ciblé :", checkboxesTags);
 
 function displayProperties(items) {
 
     // Ré-initialise le container
     propertyContainer.innerHTML = "";
+  
 // Boucle pour chaque bien
     items.forEach(bien => {
         const propertyCard = `
@@ -73,3 +75,44 @@ function displayProperties(items) {
 }
 
 displayProperties(properties);
+
+function filterAllTogether() {
+    const selectedCity = citySelect.value; // On regarde la ville sélectionnée à cet instant
+    const selectedType = typeSelect.value; // On regarde le type sélectionné à cet instant
+
+    const checkedTags = Array.from(checkboxesTags)
+                             .filter(cb => cb.checked)
+                             .map(cb => cb.value);
+
+    // On applique le filtre sur les DEUX critères en même temps !
+    const filteredList = properties.filter(bien => {
+        // Condition pour la ville (celle que tu as écrite)
+        const matchCity = selectedCity === "all" || bien.cityTag === selectedCity;
+        
+        // Condition pour le type (sur le même modèle)
+        const matchType = selectedType === "all" || bien.type === selectedType;
+
+        // Si l'utilisateur n'a rien coché, matchTags sera automatiquement "true" (on garde tout)
+        const matchTags = checkedTags.every(tag => bien.tags.includes(tag));
+        
+        // On ne garde le bien que si les DEUX conditions sont vraies (avec l'opérateur ET : &&)
+        return matchCity && matchType && matchTags;
+    });
+
+    // Enfin, on affiche le résultat final
+    displayProperties(filteredList);
+}
+
+citySelect.addEventListener('change', () => {
+    filterAllTogether();
+});
+
+typeSelect.addEventListener('change', () => {
+filterAllTogether();
+});
+
+checkboxesTags.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+        filterAllTogether(); 
+    });
+});
