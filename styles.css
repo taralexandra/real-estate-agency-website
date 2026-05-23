@@ -37,7 +37,7 @@ p,a, label, select {
 
 header {
     min-height: 100vh;
-    background-image: linear-gradient(rgba(44, 44, 44, 0.45), rgba(32, 32, 32, 0.75)), url(../images/img-hero-remise-cles.png);  
+    background-image: linear-gradient(rgba(44, 44, 44, 0.45), rgba(32, 32, 32, 0.75)), url(images/img-hero-remise-cles.png);  
     background-size: cover;
     background-position: center;
     display: flex;
